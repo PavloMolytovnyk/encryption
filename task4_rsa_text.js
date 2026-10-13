@@ -118,7 +118,7 @@ function runTask4(plaintext = RSA_TEXT_SAMPLE) {
   console.log('\nЗАВДАННЯ 4. RSA для UTF-8 рядків і Base64');
   console.log('RSA: 2048 біт, OAEP: SHA-256');
   console.log('Розмір відкритого блока:', getRsaPlaintextBlockSize(publicKey), 'байт');
-  const samples = [plaintext, 'Українська: Ґанок, єдність, їжак, шифрування. 🔐'];
+  const samples = [plaintext, 'Українська: Ґанок, єдність, їжак, шифрування.'];
   for (const sample of samples) {
     const ciphertext = encryptRsaText(sample, publicKey);
     const decrypted = decryptRsaText(ciphertext, privateKey);
